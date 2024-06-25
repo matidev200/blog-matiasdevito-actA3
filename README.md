@@ -1,4 +1,4 @@
-# ProyectoKennedy
+# Matias De Vito - Actividad A3 - Sistemas Multiplataformas
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
