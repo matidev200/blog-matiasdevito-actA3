@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="d-flex justify-content-center mb-5">
+        <h1>Listado de posteos</h1>
+    </div>
+    <div class="d-flex justify-content-center flex-column">
+        <div class="row mb-4" *ngFor="let post of blogPosts">
+            <div class="col-md-8">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.body }}</p>
+                <div *ngIf="post.tags && post.tags.length">
+                    <p>Tags: {{ post.tags.join(', ') }}</p>
+                </div>
+                <div *ngIf="post.reactions">
+                    <p>
+                        <fa-icon [icon]="['fas', 'thumbs-up']" class="mx-1"></fa-icon> {{ post.reactions.likes }}
+                        <fa-icon [icon]="['fas', 'thumbs-down']" class="mx-1"></fa-icon> {{ post.reactions.dislikes }}
+                    </p>
+                </div>
+                <p>Views: {{ post.views }}</p>
+            </div>
+            <div class="col-md-4 my-md-0 my-2 border-start">
+                <div class="p-3 border rounded">
+                    <h3 class="h6">Usuario ID</h3>
+                    <p class="text-muted">{{ post.userId }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
